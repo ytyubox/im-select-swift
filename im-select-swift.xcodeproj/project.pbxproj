@@ -3,11 +3,15 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		9A460E8025A968EF001E072B /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A460E7F25A968EF001E072B /* main.swift */; };
+		9A460E8925A9696A001E072B /* ArgumentParser in Frameworks */ = {isa = PBXBuildFile; productRef = 9A460E8825A9696A001E072B /* ArgumentParser */; };
+		9A460E8C25A97870001E072B /* Optional+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A460E8B25A97870001E072B /* Optional+.swift */; };
+		9A460E8F25A97882001E072B /* IM+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A460E8E25A97882001E072B /* IM+.swift */; };
+		9A460E9225A978A5001E072B /* Unmanged+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A460E9125A978A5001E072B /* Unmanged+.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +29,9 @@
 /* Begin PBXFileReference section */
 		9A460E7C25A968EF001E072B /* im-select-swift */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "im-select-swift"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A460E7F25A968EF001E072B /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		9A460E8B25A97870001E072B /* Optional+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Optional+.swift"; sourceTree = "<group>"; };
+		9A460E8E25A97882001E072B /* IM+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "IM+.swift"; sourceTree = "<group>"; };
+		9A460E9125A978A5001E072B /* Unmanged+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Unmanged+.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +39,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9A460E8925A9696A001E072B /* ArgumentParser in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -57,7 +65,10 @@
 		9A460E7E25A968EF001E072B /* im-select-swift */ = {
 			isa = PBXGroup;
 			children = (
+				9A460E8E25A97882001E072B /* IM+.swift */,
 				9A460E7F25A968EF001E072B /* main.swift */,
+				9A460E8B25A97870001E072B /* Optional+.swift */,
+				9A460E9125A978A5001E072B /* Unmanged+.swift */,
 			);
 			path = "im-select-swift";
 			sourceTree = "<group>";
@@ -78,6 +89,9 @@
 			dependencies = (
 			);
 			name = "im-select-swift";
+			packageProductDependencies = (
+				9A460E8825A9696A001E072B /* ArgumentParser */,
+			);
 			productName = "im-select-swift";
 			productReference = 9A460E7C25A968EF001E072B /* im-select-swift */;
 			productType = "com.apple.product-type.tool";
@@ -105,6 +119,9 @@
 				Base,
 			);
 			mainGroup = 9A460E7325A968EE001E072B;
+			packageReferences = (
+				9A460E8725A9696A001E072B /* XCRemoteSwiftPackageReference "swift-argument-parser" */,
+			);
 			productRefGroup = 9A460E7D25A968EF001E072B /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -119,7 +136,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9A460E9225A978A5001E072B /* Unmanged+.swift in Sources */,
 				9A460E8025A968EF001E072B /* main.swift in Sources */,
+				9A460E8F25A97882001E072B /* IM+.swift in Sources */,
+				9A460E8C25A97870001E072B /* Optional+.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -281,6 +301,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		9A460E8725A9696A001E072B /* XCRemoteSwiftPackageReference "swift-argument-parser" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/swift-argument-parser";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.3.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		9A460E8825A9696A001E072B /* ArgumentParser */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9A460E8725A9696A001E072B /* XCRemoteSwiftPackageReference "swift-argument-parser" */;
+			productName = ArgumentParser;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 9A460E7425A968EE001E072B /* Project object */;
 }

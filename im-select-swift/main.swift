@@ -9,6 +9,23 @@
 
 
 import Foundation
+import ArgumentParser
 
-print("Hello, World!")
 
+struct ImSelect: ParsableCommand {
+    
+    @Argument(help: "The input method want to switch")
+    var targetIM: String?
+    
+    
+    func run() throws {
+        if let targetIM = targetIM {
+            try selectedIM(targetIM: targetIM)
+        } else {
+            print(try getCurrentIM())
+        }
+    }
+}
+
+
+ImSelect.main()
